@@ -1,0 +1,18 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "build/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/rylan/play/byote",
+    "file": "/home/rylan/play/byote/src/main.c",
+    "output": "/home/rylan/play/byote/build/main.o"
+  }
+]

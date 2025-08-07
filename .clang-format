@@ -1,0 +1,16 @@
+BasedOnStyle: LLVM
+
+# === Line breaking and spacing ===
+ColumnLimit: 70
+BreakBeforeBraces: Mozilla
+IndentWidth: 4
+UseTab: Never
+
+# Alignment
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+PointerAlignment: Left
+DerivePointerAlignment: false
+PackConstructorInitializers: NextLine
+BinPackParameters: OnePerLine
