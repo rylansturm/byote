@@ -22,4 +22,7 @@ void byote_insert_char(gap_buffer_t* buffer,
                        int           index,
                        char          character);
 
+void byote_print_full_buffer(gap_buffer_t* buffer);
+void byote_print_buffer_text(gap_buffer_t* buffer);
+
 #endif

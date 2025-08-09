@@ -1,4 +1,5 @@
 #include "byote.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -86,4 +87,22 @@ void byote_insert_char(gap_buffer_t* buffer,
     buffer->gap_index++;
     buffer->gap_size--;
     buffer->length++;
+}
+
+void byote_print_full_buffer(gap_buffer_t* buffer)
+{
+    for (int i = 0; i < buffer->buffer_size; i++) {
+        printf("%c", buffer->text[i]);
+    }
+}
+
+void byote_print_buffer_text(gap_buffer_t* buffer)
+{
+    for (int i = 0; i < buffer->gap_index; i++) {
+        printf("%c", buffer->text[i]);
+    }
+    for (int i = buffer->gap_index + buffer->gap_size;
+         i < buffer->buffer_size; i++) {
+        printf("%c", buffer->text[i]);
+    }
 }

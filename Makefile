@@ -15,12 +15,12 @@ DEPS = $(OBJS:.o=.d)
 
 DIST_DIR = dist
 
-OUT = $(DIST_DIR)/byote
-TEST_OUT = $(DIST_DIR)/tests
+OUT = byote
+TEST_OUT = tests
 
 $(OUT): $(MAIN) $(OBJS)
 	@mkdir -p $(DIST_DIR)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $(DIST_DIR)/$@ $^
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
@@ -38,4 +38,4 @@ clean:
 
 $(TEST_OUT): $(TEST_OBJS) $(OBJS)
 	@mkdir -p $(DIST_DIR)
-	$(CC) $(CFLAGS) -o $@ $^ $(LDLIBS)
+	$(CC) $(CFLAGS) -o $(DIST_DIR)/$@ $^ $(LDLIBS)
